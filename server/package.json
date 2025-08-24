@@ -1,0 +1,39 @@
+{
+  "name": "server",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "dev": "nodemon src/index.js",
+    "start": "node src/index.js",
+    "db:migrate": "prisma migrate dev",
+    "db:reset": "prisma migrate reset",
+    "db:seed": "prisma db seed",
+    "studio": "prisma studio",
+    "test": "vitest run",
+    "test:watch": "vitest"
+  },
+  "type": "module",
+  "prisma": {
+    "seed": "node prisma/seed.mjs"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "dependencies": {
+    "@prisma/client": "^6.14.0",
+    "cloudinary": "^2.7.0",
+    "cors": "^2.8.5",
+    "dotenv": "^17.2.1",
+    "express": "^5.1.0",
+    "multer": "^2.0.2"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.28.3",
+    "@jest/globals": "^30.0.5",
+    "@vitest/coverage-c8": "^0.33.0",
+    "nodemon": "^3.1.10",
+    "prisma": "^6.14.0",
+    "vitest": "^3.2.4"
+  }
+}
