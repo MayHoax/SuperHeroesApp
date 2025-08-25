@@ -25,17 +25,19 @@ A simple CRUD application for managing superheroes, built with React, TailwindCS
 git clone https://github.com/MayHoax/SuperHeroesApp.git
 ```
 
-## 2. Backend Setup
+## Backend Setup
 
 ```bash
 cd SuperHeroesApp
 cd server
-npm install
+npm install --legacy-peer-deps
+npx prisma generate
+
 ```
 
 Registrate free account https://cloudinary.com/ and get API key, secret and cloudname
 
-## 3. Create .env file:
+### 1. Create .env file:
 
 ```bash
 DATABASE_URL="file:./dev.db" # or simple PosrgreSQL connection string
@@ -45,7 +47,7 @@ CLOUDINARY_API_SECRET=your_api_secret
 PORT=5000
 ```
 
-## 4. Run database migrations and seed data:
+### 2. Run database migrations and seed data:
 
 ```bash
 npm run db:migrate
@@ -55,15 +57,15 @@ npm run db:seed
 npm run dev
 ```
 
-### Frontend Setup
+## Frontend Setup
 
-## 1. Create .env file:
+### 1. Create .env file:
 
 ```bash
 VITE_SUPERHERO_API_URL=http://localhost:3000
 ```
 
-## 2.
+### 2.
 
 ```bash
 cd /client
